@@ -1,0 +1,22 @@
+{
+  "name": "DoodleIt",
+  "version": "0.0.0",
+  "authors": [
+    "Akshay Nair <phenax5@gmail.com>"
+  ],
+  "description": "Doodle App",
+  "keywords": [
+    "doodle",
+    "doodleit",
+    "sketch"
+  ],
+  "license": "MIT",
+  "homepage": "http://phenax.github.io/DoodleIt",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

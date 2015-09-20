@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	   	<meta name="Description" content="Author: Akshay Nair. DoodleIt is a webapp developed on jquery and angularJS. It allows desktop users to Doodle and then save the image to their computers." />
+	   	<meta name="keywords" content="doodle,doodleit,codepen,sketch,angular,jquery" />
+	   	<link rel=”author” href=”http://facebook.com/einstein1997”/>
+
+		<title>DoodleIt</title>
+		<link rel='stylesheet' type='text/css' href='./css/style.css' />
+	</head>
+	<body ng-app='drawApp' ng-controller='drawCtrl'>
+		<div class='contr_canv'>
+			<h1>DoodleIt</h1>
+		<br />
+		Canvas width<br />
+			<input type='range' min='150' max='1000' ng-model='width' />
+		<br /><br />
+		Canvas height<br />
+			<input type='range' min='150' max='700' ng-model='height' />
+		</div>
+
+		<div class='wrapper'>
+
+			<div class='controls'>
+				<div class='contr_col'>
+					<button class='butt_col' ng-click='color="#51e980"'></button>
+					<button class='butt_col' ng-click='color="#3b50ce"'></button>
+					<button class='butt_col' ng-click='color="#F44336"'></button>
+					<button class='butt_col' ng-click='color="#555"'></button>
+
+					<button class='saveshit'>Save</button>
+					<div class='theimage'>
+						<a href='https://s3-us-west-1.amazonaws.com/blog-jhades/post-debug-jsf-apps/jsfIntro-lifecycle.gif' download='mysk' target='_blank'>Click here to download image</a>
+					</div>
+				</div>
+				<div class='size'>
+					Stroke size :<br />
+					<input type='range' min='0.3' max='10' ng-model='size' />
+				</div>
+			</div>
+
+			<canvas id='spad' width='{{width}}' height='{{height}}'></canvas>
+
+		</div>
+
+		<script src='./bower_components/jquery/dist/jquery.min.js'></script>
+		<script src='./bower_components/angular/angular.min.js'></script>
+		<script src='./js/script.js'></script>
+	</body>
+</html>

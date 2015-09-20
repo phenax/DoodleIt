@@ -1,0 +1,116 @@
+@import 'import';
+
+body {
+	margin:0;
+	padding:0;
+	background-color:#ddd;
+}
+* {
+	font-family:Helvetica,sans-serif;
+	color:#888;
+	box-sizing:border-box;
+}
+
+canvas#spad {
+	background-color:#fff;
+	border:2px solid #888;
+	padding:0;
+	border-radius:10px;
+}
+
+.contr_canv {
+	position:fixed;
+	top:0;
+	left:0;
+	padding:20px;
+	background-color:#fff;
+	border-radius:0 0 20px 0;
+	text-align:center;
+	z-index:10;
+	@include box-shadow(0 0 5px 1px rgba(0,0,0,0.5));
+}
+
+.wrapper {
+	text-align:center;
+}
+
+.controls {
+	text-align:center;
+	margin-top:60px;
+}
+
+.contr_col {
+	width:100%;
+	background-color:#fff;
+	padding:5px;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:5;
+
+	@include box-shadow(0 0 3px 1px rgba(0,0,0,0.3));
+
+	button.butt_col {
+		display:inline-block;
+		padding:0;
+		background-color:$red;
+		width:40px;
+		height:40px;
+		border-radius:50%;
+		border:1px solid #aaa;
+		outline:none;
+		cursor:pointer;
+
+		@include box-shadow(0 0 5px 1px rgba(0,0,0,0.3));
+		@include transition(all 0.3s ease-in-out);
+
+		&:hover {
+			@include box-shadow(0 0 10px 1px rgba(0,0,0,0.6));
+		}
+	}
+
+	button.saveshit {
+		position:absolute;
+		right:30px;
+		top:10px;
+		width:80px;
+		height:30px;
+		background-color:$blue;
+		border:2px solid $blue;
+		color:#fff;
+		outline:none;
+		cursor:pointer;
+		font-weight:bold;
+
+		&:hover {
+			background-color:transparent;
+			color:$blue;
+		}
+	}
+
+	.theimage {
+		$bord:#555;
+
+		position:absolute;
+		background-color:#fff;
+		padding:30px;
+		right:20px;
+		top:70px;
+		border:3px solid $bord;
+		border-radius:10px;
+		display:none;
+
+		@include box-shadow(0 0 3px 1px rgba(0,0,0,0.3));
+
+		&::after {
+			content:" ";
+			width:0;
+			height:0;
+			position:absolute;
+			bottom:100%;
+			right:40px;
+			border:10px solid transparent;
+			border-bottom-color:$bord;
+		}
+	}
+}
